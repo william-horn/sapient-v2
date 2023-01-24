@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div>
-        <h1>Home page title</h1>
+        <h1 className="text-center bg-slate-600 text-4xl">Home page title</h1>
       </div>
     </>
   )
