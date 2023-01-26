@@ -1,5 +1,6 @@
 // /lib/dbConnect.js
 console.log('somehow this is running');
+export {};
 
 // import mongoose from 'mongoose';
 

@@ -1,4 +1,6 @@
 console.log('somehow models are being ran');
+export {};
+
 
 // import mongoose from "mongoose";
 // import bcrypt from 'bcrypt';
