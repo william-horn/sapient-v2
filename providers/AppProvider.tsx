@@ -1,7 +1,7 @@
 
 import { createContext, useContext } from "react";
 
-const AppContext = createContext();
+const AppContext = createContext(undefined);
 export const useAppContext = () => useContext(AppContext);
 
 const AppProvider = ({ children, value }) => {
