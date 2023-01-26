@@ -1,7 +1,7 @@
 
 console.log('running app provider');
 
-// anotherThing();
+anotherThing();
 
 export {};
 
