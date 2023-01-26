@@ -1,10 +1,7 @@
 
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Home() {
-  
-  console.log('client side component is working');
-  
   return (
     <>
       <div>
