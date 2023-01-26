@@ -10,6 +10,7 @@ export default function Home() {
 
         <div className="p-5 image-frame">
           <Image 
+          alt="logo"
           src={Logo} 
           width={100} 
           height={100}
