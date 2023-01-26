@@ -1,50 +1,52 @@
 // /lib/dbConnect.js
-import mongoose from 'mongoose';
+console.log('somehow this is running');
 
-/** 
-Source : 
-https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/utils/dbConnect.js 
-**/
+// import mongoose from 'mongoose';
 
-const MONGODB_URI = process.env.MONGODB_URI;
+// /** 
+// Source : 
+// https://github.com/vercel/next.js/blob/canary/examples/with-mongodb-mongoose/utils/dbConnect.js 
+// **/
 
-if (!MONGODB_URI) {
-  throw new Error(
-    'Please define the MONGODB_URI environment variable inside .env.local'
-  )
-};
+// const MONGODB_URI = process.env.MONGODB_URI;
 
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
- */
-let cached = global.mongoose;
+// if (!MONGODB_URI) {
+//   throw new Error(
+//     'Please define the MONGODB_URI environment variable inside .env.local'
+//   )
+// };
 
-if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null }
-}
+// /**
+//  * Global is used here to maintain a cached connection across hot reloads
+//  * in development. This prevents connections growing exponentially
+//  * during API Route usage.
+//  */
+// let cached = global.mongoose;
 
-async function dbConnect() {
-  if (cached.conn) {
-    return cached.conn;
-  }
+// if (!cached) {
+//   cached = global.mongoose = { conn: null, promise: null }
+// }
 
-  if (!cached.promise) {
-    const opts = {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    }
+// async function dbConnect() {
+//   if (cached.conn) {
+//     return cached.conn;
+//   }
 
-    mongoose.set('strictQuery', false);
+//   if (!cached.promise) {
+//     const opts = {
+//       useNewUrlParser: true,
+//       useUnifiedTopology: true,
+//     }
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then(mongoose => {
-      return mongoose;
-    });
-  }
+//     mongoose.set('strictQuery', false);
 
-  cached.conn = await cached.promise;
-  return cached.conn;
-}
+//     cached.promise = mongoose.connect(MONGODB_URI, opts).then(mongoose => {
+//       return mongoose;
+//     });
+//   }
 
-export default dbConnect;
+//   cached.conn = await cached.promise;
+//   return cached.conn;
+// }
+
+// export default dbConnect;
