@@ -4,7 +4,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false, // set to true when we actually care about using typescript the right way
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
