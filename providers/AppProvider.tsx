@@ -1,21 +1,15 @@
 
-console.log('running app provider');
+import { createContext, useContext } from "react";
 
-anotherThing();
+const AppContext = createContext();
+export const useAppContext = () => useContext(AppContext);
 
-export {};
+const AppProvider = ({ children, value }) => {
+  return (
+    <AppContext.Provider value={value}>
+      {children}
+    </AppContext.Provider>
+  )
+}
 
-// import { createContext, useContext } from "react";
-
-// const AppContext = createContext();
-// export const useAppContext = () => useContext(AppContext);
-
-// const AppProvider = ({ children, value }) => {
-//   return (
-//     <AppContext.Provider value={value}>
-//       {children}
-//     </AppContext.Provider>
-//   )
-// }
-
-// export default AppProvider
+export default AppProvider
