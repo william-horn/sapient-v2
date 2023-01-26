@@ -1,5 +1,7 @@
 
 console.log('running app provider');
+let thing = "something";
+thing = 100;
 export {};
 
 // import { createContext, useContext } from "react";
