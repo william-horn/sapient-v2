@@ -1,5 +1,7 @@
 
 
 declare global {
-  const mongoose: any
+  let mongoose: any
 }
+
+export {};
